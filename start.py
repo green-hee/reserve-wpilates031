@@ -2,6 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from datetime import datetime, timezone
+import time
+
 
 
 url = "https://wpilates031.cafe24.com/index.php?mid=yeyak&act=dispYeyakOrder"
@@ -40,8 +44,8 @@ def reserve(date: str, time: str):
             print('already reserved')
             return True
 
-    # 확인버튼 클릭
     enables[0].click()
+    # 확인버튼 클릭
     print("click!!")
     return True
 
@@ -54,8 +58,9 @@ login(ID, PW)
 # 다음주 버튼 클릭
 # move_next_week = driver.find_element(By.LINK_TEXT, '다음주').click()
 
-result = reserve(DATE, TIME)
-print(f"result : {result}")
+# 일회성 시도
+# result = reserve(DATE, TIME)
+# print(f"result : {result}")
 
 
 
