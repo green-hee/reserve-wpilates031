@@ -1,0 +1,19 @@
+# 일반적인 크롤링 사용 방법
+# html = driver.page_source()
+# beautiful soup 사용
+
+
+# # 뒤로가기
+# browser.back()
+
+# # 앞으로 가기
+# browser.forward()
+
+# # 새로고침
+# browser.refresh()
+
+# # 탭 닫기
+# browser.close()
+
+# # 창 닫기
+# browser.quit()
