@@ -63,6 +63,25 @@ login(ID, PW)
 # print(f"result : {result}")
 
 
+print(f'시작: {datetime.now(tz=timezone.utc)}')
+i=1
+while(True):
+    print(f'{i}번째 시도')
+    i=i+1
+    driver.refresh() #새로고침
+    result = reserve(DATE, TIME)
+    print(f'result : {result}')
+    if result:
+        print(f'종료: {datetime.now(tz=timezone.utc)}')
+        break
+    else:
+        print(f'재시도: {datetime.now(tz=timezone.utc)}')
+        time.sleep(1)
+    
+    if i % 10 == 0:
+        time.sleep(30)
+
+
 
 
 # <li class="li-data " data-id="412" data-unit="3" data-usedate="20240708" data-vw="월" data-vtitle="황톨" data-vdate="2024-07-08" data-vclasstitle="바렐" data-classtime="2030" data-am="오후" data-h="8" data-m="30">&nbsp;</li>
